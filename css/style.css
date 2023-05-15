@@ -24,46 +24,154 @@ html {
     align-items: center;
     gap: 25px;
     font-size: 18px;
-    /* background-color: blueviolet */
 
 }
 #home-tags {
     display: flex;
     gap: 20px;
 }
-
 #home-tags > li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#home-tags > li > a {
     color: rgb(213, 213, 213);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    padding: 5px;
-    width: 130px;
+    padding: 10px;
+    height: fit-content;
+    width: 135px;
     text-align: center;
+    font-weight: bold;
     border-radius: 50px;
-    background-color: rgb(110, 109, 109);
+    background-color: rgba(0, 0, 0, 0.836);
+    transition-property: all;
+    transition-duration: 350ms;
+    position: relative;
+
 }
+
 #home-nav > a {
     text-decoration: none;
     color: black;
     background-color: #EF733D;
     border: solid 4px #EF733D;
-    border-radius: 10px;
+    border-radius: 50px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     padding: 5px;
     font-weight: bold;
+    transition-property: all;
+    transition-duration: 350ms;
 
 }
 #home-nav > a:hover{
     background-color: transparent;
-}
-.tags {
-    border: solid 4px rgb(110, 109, 109);
-}
-#home-tags > li:hover {
-    background-color: gray;
-    border: solid 4px gray;
-    color: white;
+    color: black;
+    cursor: pointer;
+
 
 }
+
+#home-tags > li > a:hover {
+    background-color:rgb(247, 227, 149);
+    box-shadow:  1px 1px 3px rgb(74, 65, 29);
+    color: black;
+    cursor: pointer;
+
+}
+.tags:hover .menu-container{
+    display: inline-block;
+}
+#home-tags > li > a.drop-down:hover::after{
+    content: "";
+    position: absolute;
+    /* top: 50%; */
+    transform: translateY(-70%);
+    margin-left: 2px;
+    border-top:5px solid  transparent;
+    border-right:5px solid transparent ;
+    border-bottom:5px solid black ;
+    border-left:5px solid transparent ;
+}
+.drop-down::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20%);
+    margin-left: 2px;
+    border-top:5px solid rgb(213, 213, 213) ;
+    border-right:5px solid transparent ;
+    border-bottom:5px solid transparent ;
+    border-left:5px solid transparent ;
+}
+.drop-down{
+    position:relative;
+}
+.menu-container {
+    
+    background-color: transparent;
+    width: 180px;
+    height: fit-content;
+    position: absolute;
+    top: 60px;
+    display: none;
+    
+}
+.invisible-line{
+    height: 20px;
+}
+.menu > ul > li:first-child::before{
+    content: "";
+    position: absolute;
+    top: -1%;
+    left: 10%;
+    transform: translateY(-20%);
+    margin-left: 2px;
+    border-top:15px solid transparent;
+    border-right:15px solid transparent ;
+    border-bottom:15px solid #6D6E70 ;
+    border-left:15px solid transparent ;
+    transition-property: all;
+    transition-duration: 150ms;
+}
+.menu {
+    background-color: #6D6E70;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    
+}
+.menu > ul > li{
+    padding: 15px 10px;
+    border-bottom: 1px solid gray;
+    transition-property: all;
+    transition-duration: 150ms;
+    
+}
+.menu > ul > li:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+    
+}
+.menu > ul > li:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    
+}
+.menu > ul > li:hover{
+    background-color: #8CC1C1;
+    cursor: pointer;
+    
+}
+.menu > ul > li:hover::before{
+    border-bottom-color: #8CC1C1;
+
+}
+
 #contact-section {
     position: fixed;
     left: 100%;
@@ -310,3 +418,4 @@ html {
 .img {
     background-color: transparent;
 }
+
