@@ -163,12 +163,14 @@ html {
     
 }
 .menu > ul > li:hover{
-    background-color: #8CC1C1;
+    background-color: rgba(247, 227, 149, 0.901);
+    color: #6D6E70;
     cursor: pointer;
     
 }
 .menu > ul > li:hover::before{
-    border-bottom-color: #8CC1C1;
+    border-bottom-color: rgba(247, 227, 149, 0.901);
+    color: #6D6E70;
 
 }
 
